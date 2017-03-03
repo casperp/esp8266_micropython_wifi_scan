@@ -15,5 +15,5 @@ Shows wifi scan on ssd1306 oled display.
 ###How to use and install.
 
 there are two ways to run the script on the esp8266>
-  1. upload with [webrepl]http://micropython.org/webrepl/?
+  1. upload with [webrepl](http://micropython.org/webrepl/?)
   2. ampy 
