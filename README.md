@@ -1,6 +1,6 @@
 # esp8266_micropython_wifi_scan
 Shows wifi scan on ssd1306 OLED display.
-![esp8266](https://imgur.com/gallery/CNJnB "how it works")
+![esp8266](https://i.imgur.com/8HM1kYL.jpg "how it works")
 
 ###Requirements:
   1.[MicroPython driver for SSD1306 OLED displays from Adafruit.](https://github.com/adafruit/micropython-adafruit-ssd1306)
