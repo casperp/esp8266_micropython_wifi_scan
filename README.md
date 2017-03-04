@@ -16,12 +16,11 @@ Shows wifi scan on ssd1306 OLED display.
 
 There are two ways to run the script on the esp8266.
   First upload the script, There are two options for this
-    1. upload with [webrepl](http://micropython.org/webrepl/?)
-    
-    2. upload with [ampy by adafruit](https://github.com/adafruit/ampy)
+    1. upload with [webrepl](http://micropython.org/webrepl/?)\n
+    2. upload with [ampy by adafruit](https://github.com/adafruit/ampy)\n
     
 
-For the single file version you need the upload the <i>single_file/main.py</i> and [SSD1306.py](https://github.com/adafruit/micropython-adafruit-ssd1306/blob/master/ssd1306.py)
+For the single file version you need the upload the <i>single_file/main.py</i> and [SSD1306.py] (https://github.com/adafruit/micropython-adafruit-ssd1306/blob/master/ssd1306.py)
     if you don't already have done this. After uploading replug the board intro the
     power source or use the restart button. Now the display should go white and then show the WIFI information.
 
