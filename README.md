@@ -28,3 +28,11 @@ For the Multiple file's option you need to upload <i>Multiple files/displaywifi.
 </i> also [SSD1306.py](https://github.com/adafruit/micropython-adafruit-ssd1306/blob/master/ssd1306.py)
   is needed. After uploading replug the board intro the power source or use the restart button.
   Now the display should go white and then show the WIFI information.
+
+
+""""default connection:
+esp8266 -> OLED display
+5(d1)   ->  scl
+6(d2)   ->  sda
+GND     ->  GND
+3.3v    ->  vcc"""
