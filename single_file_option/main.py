@@ -4,8 +4,14 @@ import machine
 import ssd1306
 import utime
 import ubinascii
+import math
 webrepl.start()
-
+"""default connection:
+esp8266 -> OLED display
+5(d1)   ->  scl
+6(d2)   ->  sda
+GND     ->  GND
+3.3v    ->  vcc"""
 
 def return_wifi_sec(num):
 	try:
@@ -24,7 +30,11 @@ def return_wifi_sec(num):
 	except:
 		return num
 
-        
+#def returnfreq(channel):
+#	lookuptable = {1:2412,2:2417,3:2422,4:2427,5:2432,6:2437,7:2442,8:2447,
+#					9:2452,10:2457,11:2462,12:2467,13:2472,14:2484}
+#	return lookuptable[channel]
+
 def main():
 	i2c = machine.I2C(machine.Pin(5), machine.Pin(4))
 	oled = ssd1306.SSD1306_I2C(128, 64, i2c)
@@ -52,6 +62,7 @@ def main():
 			oled.text(var,30,20)
 			oled.text(status,30,30)
 			oled.text(kanaal, 30,40)
+			oled.text("'{:04.3f},M". format(),0,50)
 			oled.show()
 			utime.sleep_ms(10000)
 main()
