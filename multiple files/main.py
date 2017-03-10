@@ -8,7 +8,7 @@ esp8266 -> OLED display
 5(d1)   ->  scl
 6(d2)   ->  sda
 GND     ->  GND
-3.3v    ->  vcc"""
+3.3v    ->  VCC"""
 
 
 
