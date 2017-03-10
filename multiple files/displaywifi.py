@@ -2,10 +2,14 @@ import network
 import machine
 import ssd1306
 import utime
-
+"""import network,machine, ssd1306,utime."""
 
 class DisplayWifi:
     def __init__(self,pin1='5',pin2='4'):
+        """initialize the function with the pins 5,4 if you don't choice else
+        fill pin,pin in when calling the function.
+        In this function we initialize the i2c bus and the oled display. Than
+        activate wifi radio. """
         self.pin1 = pin1
         self.pin2 = pin2
         self.name = ''
@@ -20,6 +24,8 @@ class DisplayWifi:
     	self.wlan.active(True)
 
     def format(self):
+        """Try to do a wifiscan()  and than formate the text and than show it.
+        If wifi scan fails the display will show NONE so ther wont be an error. """
         try:
             wlan_list = self.wlan.scan()
         except:
@@ -49,6 +55,10 @@ class DisplayWifi:
         		return num
 
     def show_display(self):
+        """The function that will show the display. First clean the display then
+         show all data. For network names if the name is longer than the display
+          it split in two and shown on row 1,2. When all the data is written the esp will sleep for 10000 ms"""
+
         self.oled.fill(0)
         self.oled.show()
         if len(self.name) > 15:
