@@ -15,11 +15,9 @@ GND     ->  GND
 def main():
     display = displaywifi.DisplayWifi(5,4)
     # use the displaywifi on the pins 4,5
-    log = log_wifi.Log_Wifi(wlan.scan())
     while True:
         display.format()
         print(display)
-        log.log(wlan.scan())
 
         # print the information that's shown on the screen for debugging.
 main()
