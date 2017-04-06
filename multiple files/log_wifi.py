@@ -11,8 +11,8 @@ while True:
 	print(gc.mem_free())
 	time.sleep(120)
 ###__________________###
-
 """
+
 class Log_Wifi:
     def __init__(self,wifi_list,filename="wifi_list.txt"):
         self.wifi_list = wifi_list
