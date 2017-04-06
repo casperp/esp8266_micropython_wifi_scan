@@ -2,6 +2,8 @@ import network
 import machine
 import ssd1306
 import utime
+import gc
+gc.enable()
 """import network,machine, ssd1306,utime."""
 
 class DisplayWifi:
@@ -38,6 +40,9 @@ class DisplayWifi:
             self.show_display()
 
     def get_secure(self, num):
+        """Based on the number that wifi scan returns we can see wich type of
+           wifi it is, so wiht a Try:, if else we return the type. When its a
+           unknown type we return the number."""
         	try:
         		if int(num) == 0:
         			return 'Open wifi'
@@ -57,7 +62,8 @@ class DisplayWifi:
     def show_display(self):
         """The function that will show the display. First clean the display then
          show all data. For network names if the name is longer than the display
-          it split in two and shown on row 1,2. When all the data is written the esp will sleep for 10000 ms"""
+          it split in two and shown on row 1,2. When all the data is written the
+          esp will sleep for 10000 ms"""
 
         self.oled.fill(0)
         self.oled.show()
@@ -69,6 +75,7 @@ class DisplayWifi:
         self.oled.text(self.strengt,30,20)
         self.oled.text(self.status,30,30)
         self.oled.text(self.kanaal, 30,40)
+        self.oled.text((str(gc.mem_free())+ " B"), 30,50)
         self.oled.show()
         utime.sleep_ms(10000)
 
